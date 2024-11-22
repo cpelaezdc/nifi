@@ -3,7 +3,7 @@
 ### Step 1: 
  Copy current [docker compose](./docker-compose.yml) and postgresql driver files in the same directory.  
 
- ![alt text](files.png)
+ ![alt text](./images/files.png)
 
 
 ## Step 2:
@@ -83,11 +83,66 @@ https://localhost:8443/
 -  Write user and password related with this [docker compose](./docker-compose.yml) file.
 
 ```text
-username:  nifi-12345
-password:  nifi-12345
+username:  nifi-projet123
+password:  nifi-projet123
 ```
 
 -  You must be in nifi Canvas.
 
-![alt text](nifi-canvas.png)
+![alt text](./images/nifi-canvas.png)
 
+#
+
+# LOAD A FLOW DEFINITION IN YOUR CANVAS
+
+## Step 1:
+-  Drag and drop a process group into the canvas
+
+![alt text](./images/draganddrop_processgroup.png)
+
+## Step 2:
+-  Click on Browse to find the flow definition file, is a JSON file.   No matter with the name of the file.  
+
+![alt text](./images/findFlowDefinition.png)
+
+## Step 3:
+-  Once file has been selected, click on add
+
+![alt text](./images/addFlowDefinition.png)
+
+## Step 4:
+-  A Process group is created with the corresponding flow definition.
+
+![alt text](./images/processgroup.png)
+
+## Step 5:
+-  Double click in process group.   You will see all the schema and sub-process.
+
+![alt text](./images/flowDefinition.png)
+
+## Step 6:
+-  Go to parameter contextS to change IP, PORTS, USER and PASSWORD
+
+![alt text](./images/parameterContext.png)
+![alt text](./images/editParameterContext.png)
+
+
+## Step 7:
+-  Click on empty space in the canvas and click on Controller services in contextual menu.
+
+![alt text](./images/controllerServices.png)
+
+## Step 8:
+-  You will see the list of all Controller services,  go to DBCPConnectionPool_POSTGRES the only you need to edit is Database prostres user and password.
+
+![alt text](./images/editControllerPostgres.png)
+
+## Step 9:
+-  By default all controller services are disable.  Is neccesary to enable all. 
+
+![alt text](./images/enableControllerServices.png)
+
+## Step 10:
+-  To comeback to canvas select canvas in menu
+
+![alt text](./images/menuCanvas.png)
