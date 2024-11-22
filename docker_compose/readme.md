@@ -3,7 +3,7 @@
 ### Step 1: 
  Copy current [docker compose](./docker-compose.yml) and postgresql driver files in the same directory.  
 
- ![alt text](image.png)
+ ![alt text](files.png)
 
 
 ## Step 2:
@@ -22,8 +22,8 @@ services:
     environment:
       - TZ=America/Montreal    # By default container with Montreal tyme zone (change if neccesary. )
       - NIFI_WEB_HTTP_HOST=nifi
-      - SINGLE_USER_CREDENTIALS_USERNAME=nifi-12345   # You can change for desired user
-      - SINGLE_USER_CREDENTIALS_PASSWORD=nifi-12345   # You can change for desired password
+      - SINGLE_USER_CREDENTIALS_USERNAME=nifi-projet123   # You can change for desired user
+      - SINGLE_USER_CREDENTIALS_PASSWORD=nifi-projet123   # You can change for desired password
       
     container_name: nifi
     ports:
@@ -71,4 +71,23 @@ docker-compose up -d
 
 ## Step 5:
 -  Open nifi in the browser,  change the port if you has prevously modify this [docker compose](./docker-compose.yml) file.
+
+```http
+https://localhost:8443/
+```
+
+## Step 6:
+-  A warning appears. Click the 'Advanced' button, then click 'Accept the risk and continue'
+
+## Step 7:
+-  Write user and password related with this [docker compose](./docker-compose.yml) file.
+
+```text
+username:  nifi-12345
+password:  nifi-12345
+```
+
+-  You must be in nifi Canvas.
+
+![alt text](nifi-canvas.png)
 
